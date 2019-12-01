@@ -1,8 +1,6 @@
 #!/bin/bash
+# Ceiia OpenVPN Configuration
 #
-# https://github.com/Nyr/openvpn-install
-#
-# Copyright (c) 2013 Nyr. Released under the MIT License.
 
 
 if grep -qs "14.04" /etc/os-release; then
@@ -21,8 +19,7 @@ if grep -qs "CentOS release 6" /etc/redhat-release; then
 fi
 
 if grep -qs "Ubuntu 16.04" /etc/os-release; then
-	echo 'Ubuntu 16.04 is no longer supported in the current version of openvpn-install
-Use an older version if Ubuntu 16.04 support is needed: https://git.io/vpn1604'
+	echo 'Ubuntu 16.04 is no longer supported in the current version of openvpn-install'
 	exit
 fi
 
@@ -33,7 +30,7 @@ if readlink /proc/$$/exe | grep -q "dash"; then
 fi
 
 if [[ "$EUID" -ne 0 ]]; then
-	echo "Sorry, you need to run this as root"
+	echo "Sorry, you need to run this as root ( sudo su )"
 	exit
 fi
 
@@ -57,7 +54,7 @@ elif [[ -e /etc/centos-release || -e /etc/redhat-release ]]; then
 	os="centos"
 	group_name="nobody"
 else
-	echo "Looks like you aren't running this installer on Debian, Ubuntu or CentOS"
+	echo "Looks like you aren't running this installer on Debian, Ubuntu or CentOS , please choose a supported version"
 	exit
 fi
 
