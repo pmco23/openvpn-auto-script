@@ -8,7 +8,7 @@ STEP 2 : First time you run the script on the server it will install and configu
        
        bash openvpn-install.sh
     
-STEP 3 : Copy the client.ovpn file to your client machine and connect running :
+STEP 3 : Copy the client.ovpn file ( should be in Ubuntu /root ) to your client machine and connect running :
 
 	$ sudo apt update
 	
