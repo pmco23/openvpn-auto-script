@@ -14,9 +14,9 @@ STEP 3 : Copy the client.ovpn file to your client machine and connect running :
 	
 	$ sudo apt install openvpn
         
-	$ sudo yum install epel-release
+	$ sudo apt install epel-release
         
-	$ sudo yum install openvpn
+	$ sudo apt install openvpn
         
 	$ ls /etc/openvpn           
 	// expected output update-resolv-conf
