@@ -28,7 +28,8 @@ STEP 3 : Copy the client.ovpn file ( should be in Ubuntu /root ) to your client 
 	
 	$ sudo openvpn --config client.ovpn 
         
-       
+       NOTAS : 
+      sudo systemctl start/stop/status/restart  openvpn 
                  
         
         ```
